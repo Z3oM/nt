@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+$MaxContent: 1280px;
+
+@mixin left-decorative-element($height, $color) {
+  &::before {
+    content: "";
+    position: absolute;
+    height: $height;
+    width: 8px;
+    border-radius: 5px;
+    background-color: $color;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+// Component App
+
+header {
+  width: 100%;
+  height: 95px;
+  background-color: #c4c4c4;
+}
+
+// Component App > Component Header
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  a {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 12px 12px;
+  }
+
+  &:last-child {
+    margin-right: 150px;
+  }
+}
+
+section {
+  margin: 0 auto;
+  width: $MaxContent;
+}
+
+.mw-content {
+  margin: 0 auto;
+  width: $MaxContent;
+}
+
+.no-content {
+  margin: 0px;
+  width: auto;
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-logotype {
+  a {
+    display: inline-block;
+    padding-left: 16px;
+    font-size: 2em;
+  }
+
+  @include left-decorative-element(34px, #e4e4e4);
+}
+
+.login-register {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  img {
+    width: 100%;
+  }
+}
+
+// Component Header > Component Language selector
+
+.lang-select {
+  cursor: pointer;
+  span {
+    font-size: 28px;
+  }
+}
+
+.decor-arrow {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  img {
+    width: 100%;
+  }
+}
+
+// Component App > Component Main
+
+.main-header {
+  margin: 50px 0px 50px 0px;
+  @include left-decorative-element(40px, #c4c4c4);
+  h1 {
+    font-size: 34px;
+    padding-left: 15px;
+    font-weight: normal;
+  }
+}
+
+.main-content-lk {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// Component App > Component Main Right Block
+
+.auto-width {
+  flex-grow: 1;
+}
+
+.lk-right-side {
+  flex-grow: 1;
+  max-width: 880px;
+}
+
+.lk-panel-info {
+  background-color: #f7f7f7;
+  padding: 25px;
+  border-radius: 10px;
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 16px;
+  }
+}
+
+.info-user-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+// Component App > Component Main Right Block > Component User Editor Icon
+
+.one-icons-element {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-block {
+  width: 58px;
+  height: 58px;
+  margin-right: 16px;
+
+  background-color: #c4c4c4;
+  border-radius: 50%;
+  text-align: center;
+  img {
+    width: 70%;
+    padding-top: 8px;
+    display: inline-block;
+  }
+}
+
+.text-information {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.text-information-title {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.text-information-content {
+  flex-grow: 1;
+}
+
+// Component App > Component Main Left Block >
+
+.lk-left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 26px;
+}
+
+.lk-left-icon-user {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  text-align: center;
+  img {
+    padding-top: 8px;
+    display: inline-block;
+    width: 80%;
+  }
+}
+
+.lk-left-user-info-block {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 1px 1px 5px 1px #dbdbdb;
+  border-radius: 8px;
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  span {
+    font-size: 16px;
+  }
+}
+
+// Alert form
+
+.alert-form {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.form-inputs {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+
+  width: 650px;
+  min-height: 450px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.top-block-btn {
+}

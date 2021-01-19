@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <!-- Естественное подключить можно и kebab-case, но так компонент не подсвечивается в VS =( 
+    Можно настроить сам VS но зачем, если такой способ описан в документации -->
+      <CHeader />
+    </header>
+    <main>
+      <section>
+        <CMain />
+      </section>
+      <section class="main-content-lk">
+        <CMBlockLeft />
+        <CMBlockRight />
+      </section>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CHeader from "./components/ComponentHeader";
+import CMain from "./components/ComponentMain";
+import CMBlockLeft from "./components/ComponentMainLeftBlock";
+import CMBlockRight from "./components/ComponentMainRightBlock";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    CHeader,
+    CMain,
+    CMBlockLeft,
+    CMBlockRight,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
